@@ -1,14 +1,15 @@
 const maxFloor = input => {
-  let floor = input;
-  let expected = 0;
-  // for(let i=floor; i>=1; i--) {
-  //   let ff = i/2+1;
-  //   if(i/2+1){
-  //     expected++;
-  //   }
-    
-  // }
-  // return expected;
+  let floor = 0;
+  let n = input;
+
+  while ( n > 0 ) {
+      const base = ( n / 2 ) + 1;
+      n = n - base;
+      floor++
+  }
+
+  return floor;
 };
 
 module.exports = { maxFloor };
+
